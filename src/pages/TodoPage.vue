@@ -1,9 +1,9 @@
-<template lang="">
+<template>
     <main>
+        <h2>{{ todoName }}</h2>
         <todo-form
             @create="createTodo"
         />
-        <h2>{{ todoName }}</h2>
         <div>
             <todo-list
                 v-if="todos.length" 
@@ -16,8 +16,9 @@
     </main>
 </template>
 <script>
-import TodoForm from './TodoForm.vue';
-import TodoList from './TodoList.vue';
+import TodoForm from '@/components/TodoForm.vue';
+import TodoList from '@/components/TodoList.vue';
+
 
 export default {
     components: {
@@ -43,6 +44,6 @@ export default {
 
 }
 </script>
-<style lang="">
+<style>
     
 </style>
